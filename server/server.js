@@ -177,7 +177,7 @@ if (process.env.NODE_ENV === 'production') {
         res.sendfile(path.resolve(__dirname, '../client', 'build', 'index.html'))
     })
 }
-const PORT=5000;
+const PORT = 5000 || process.env.PORT;
 app.listen(PORT,()=>{
     console.log(`server runs on ${PORT}`)
 })
